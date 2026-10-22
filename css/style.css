@@ -1,0 +1,38 @@
+body {
+    background-color: #EEEED2;
+    font-size: 50px;
+}
+
+.chess {
+    width: 576px;
+    height: 576px;
+    margin: 30px auto;
+    border: 8px solid #3a551f;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    height: 12.5%;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI Symbol", serif;
+    line-height: 1;
+}
+
+/* Light and dark squares */
+.row:nth-child(odd) .square:nth-child(odd),
+.row:nth-child(even) .square:nth-child(even) {
+    background-color: #EEEED2;
+}
+
+.row:nth-child(odd) .square:nth-child(even),
+.row:nth-child(even) .square:nth-child(odd) {
+    background-color: #769656;
+}
